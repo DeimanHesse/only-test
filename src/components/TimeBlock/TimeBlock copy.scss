@@ -211,7 +211,6 @@
     @media (max-width: 800px) {
       display: none;
     }
-    --common_count: 0;
   }
   &__nav-item {
     border-radius: 50%;
@@ -233,12 +232,12 @@
     font-weight: 400;
     line-height: 30px;
 
-    // $count2: calc(var(--common_count) * 1);
     $count2: 6;
     $distance: calc(360deg / $count2);
 
     // @for $i from 1 through $count2 {
     //   &:nth-child(#{$i}) {
+
     //     --_d: calc(360deg - #{$distance} * #{$i} + var(--common_d));
     //   }
     // }
