@@ -206,12 +206,12 @@
     position: relative;
     width: var(--_ow);
     transition: 0.5s;
-    --common_d: 30deg;
-    // --common_d: 0deg;
+    // --common_d: 30deg;
+    --common_d: 0deg;
+    --common_count: 8;
     @media (max-width: 800px) {
       display: none;
     }
-    --common_count: 0;
   }
   &__nav-item {
     border-radius: 50%;
@@ -235,52 +235,13 @@
 
     // $count2: calc(var(--common_count) * 1);
     $count2: 6;
-    $distance: calc(360deg / $count2);
+    $distance: calc(360deg / var(--common_count));
 
-    // @for $i from 1 through $count2 {
-    //   &:nth-child(#{$i}) {
-    //     --_d: calc(360deg - #{$distance} * #{$i} + var(--common_d));
-    //   }
-    // }
-
-    &:nth-child(1) {
-      --_d: calc(var(--common_d) + 270deg);
+    @for $i from 1 through $count2 {
+      &:nth-child(#{$i}) {
+        --_d: calc(360deg - #{$distance} * #{$i} + var(--common_d));
+      }
     }
-    &:nth-child(2) {
-      --_d: calc(var(--common_d) + 330deg);
-    }
-    &:nth-child(3) {
-      --_d: calc(var(--common_d) + 30deg);
-    }
-    &:nth-child(4) {
-      --_d: calc(var(--common_d) + 90deg);
-    }
-    &:nth-child(5) {
-      --_d: calc(var(--common_d) + 150deg);
-    }
-    &:nth-child(6) {
-      --_d: calc(var(--common_d) + 210deg);
-    }
-
-    // &:nth-child(1) {
-    //   --_d: 300deg;
-    //   border: 4px solid red;
-    // }
-    // &:nth-child(2) {
-    //   --_d: 360deg;
-    // }
-    // &:nth-child(3) {
-    //   --_d: 60deg;
-    // }
-    // &:nth-child(4) {
-    //   --_d: 120deg;
-    // }
-    // &:nth-child(5) {
-    //   --_d: 180deg;
-    // }
-    // &:nth-child(6) {
-    //   --_d: 240deg;
-    // }
   }
   &__item-wrapper {
     width: 10px;

@@ -1,11 +1,134 @@
 import "./App.scss";
 import TimeBlock from "./components/TimeBlock/TimeBlock";
 
-const data = [
+interface Slide {
+  slideTitle: string;
+  slideText: string;
+}
+
+interface Section {
+  sectionTitle: string;
+  sectionDateStart: number;
+  sectionDateEnd: number;
+  sectionSlides: Slide[];
+}
+
+const sections: Section[] = [
   {
     sectionTitle: "Кино",
-    sectionDateStart: 1891,
-    sectionDateEnd: 1990,
+    sectionDateStart: 1977,
+    sectionDateEnd: 1986,
+    sectionSlides: [
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+    ],
+  },
+  {
+    sectionTitle: "Наука",
+    sectionDateStart: 1987,
+    sectionDateEnd: 1991,
+    sectionSlides: [
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+    ],
+  },
+  {
+    sectionTitle: "Живопись",
+    sectionDateStart: 1992,
+    sectionDateEnd: 1997,
+    sectionSlides: [
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+      {
+        slideTitle: "1890",
+        slideText:
+          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
+      },
+    ],
+  },
+  {
+    sectionTitle: "Литература",
+    sectionDateStart: 1999,
+    sectionDateEnd: 2004,
     sectionSlides: [
       {
         slideTitle: "1890",
@@ -41,8 +164,8 @@ const data = [
   },
   {
     sectionTitle: "Кино",
-    sectionDateStart: 1891,
-    sectionDateEnd: 1990,
+    sectionDateStart: 2008,
+    sectionDateEnd: 2012,
     sectionSlides: [
       {
         slideTitle: "1890",
@@ -78,119 +201,8 @@ const data = [
   },
   {
     sectionTitle: "Кино",
-    sectionDateStart: 1891,
-    sectionDateEnd: 1990,
-    sectionSlides: [
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-    ],
-  },
-  {
-    sectionTitle: "Кино",
-    sectionDateStart: 1891,
-    sectionDateEnd: 1990,
-    sectionSlides: [
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-    ],
-  },
-  {
-    sectionTitle: "Кино",
-    sectionDateStart: 1891,
-    sectionDateEnd: 1990,
-    sectionSlides: [
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-      {
-        slideTitle: "1890",
-        slideText:
-          "13 сентября — частное солнечное затмение, видимое в Южной Африке и части Антарктиды",
-      },
-    ],
-  },
-  {
-    sectionTitle: "Кино",
-    sectionDateStart: 1891,
-    sectionDateEnd: 1990,
+    sectionDateStart: 2015,
+    sectionDateEnd: 2022,
     sectionSlides: [
       {
         slideTitle: "1890",
@@ -229,7 +241,7 @@ const data = [
 function App() {
   return (
     <div className="app">
-      <TimeBlock data={data} />
+      <TimeBlock data={sections} />
     </div>
   );
 }
